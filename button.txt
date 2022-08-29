@@ -1,0 +1,15 @@
+角ボタン
+	text: string;
+	onClick: React.MouseEventHandler;
+	style?: CSSProperties;
+	disable?: boolean;
+丸ボタン
+	text: string;
+	onClick: React.MouseEventHandler;
+	style?: CSSProperties;
+	disable?: boolean;
+
+#FFF2CC,
+影,
+fontWeight: 'bold',
+font-family: 'Meiryo UI',
