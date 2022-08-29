@@ -13,3 +13,6 @@
 影,
 fontWeight: 'bold',
 font-family: 'Meiryo UI',
+
+
+@mui/x-data-grid
