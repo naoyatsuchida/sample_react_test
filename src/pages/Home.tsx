@@ -10,9 +10,11 @@ const Home = () => {
     <div>
         Home
       <button onClick={() => { navigate('/') }} >home</button>
-      <button onClick={()=>{navigate('/tab')}} >tab</button>
+      <button onClick={() => { navigate('/tab') }} >tab</button>
+      <br />
       <SquareButton text={"tarako"} onClick={() => { console.log('sss') }} styles={{ backgroundColor: "red" }} disable={false}></SquareButton>
-      <SquareButton text={"sasimi"} onClick={() => { console.log('sss') }} styles={{backgroundColor:"red" }} disable={true} ></SquareButton>
+      <br />
+      <SquareButton text={"sasimi"} onClick={() => { console.log('sss') }} disable={true} ></SquareButton>
 
     </div>
   )
