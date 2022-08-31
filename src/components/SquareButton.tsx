@@ -10,7 +10,7 @@ type ButtonType = {
 
 const SquareButton = (props: ButtonType) => {
     const { text, onClick, styles, disable } = props;
-    let buttonStyle = {  backgroundColor: "#FFF2CC", fontWeight: "bold", fontFamily: "Meiryo UI",borderRadius:"0px" ,boxShadow:"2px 2px 2px 1px rgba(0, 0, 0, 0.5)"};
+    let buttonStyle = {  backgroundColor: "#FFF2CC", fontWeight: "bold", color: "black" ,fontFamily: "Meiryo UI",borderRadius:"0px" ,boxShadow:"2px 2px 2px 1px rgba(0, 0, 0, 0.5)"};
     let styled = { ...buttonStyle, ...styles };
     return (
         <>
