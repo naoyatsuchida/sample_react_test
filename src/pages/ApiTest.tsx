@@ -1,30 +1,40 @@
 import React,{useEffect,useState} from 'react'
 import axios from "axios";
 
-const ApiTest = () => {
-    const [data, setData] = useState();
+type Post = {
+  id: string;
+  body: string;
+  title: string;
 
-   const getApi = () => {
+}
+
+const ApiTest: React.FC = () => {
+    const [data, setData] = useState<Post[]>([]);
+
+   const getApi = async() :Promise<Post[]>=> {
        const url = "https://jsonplaceholder.typicode.com/posts";
-       let res = axios.post(url).then((data) => {
-           console.log(data)
-       });
-       return res;
+     let res = await axios.get(url);
+     return res.data
    }
-    let res;
-    useEffect(() => {
-         res = getApi();
-        console.log(res.then((data) => {
-            return data
-        }));
-        // setData(res);
-  })
 
+  useEffect(() => {
+    (async function () {
 
+      const data = await getApi();
+      setData(data);
+    })();
+  },[])
 
   return (
+
     <div>
-      {res}
+      {data.map((da,i) => {
+        return (<>
+          <div key={i}>{da.id }</div>
+          <div>{da.title }</div>
+        </>
+        )
+      })}
     </div>
   )
 }
